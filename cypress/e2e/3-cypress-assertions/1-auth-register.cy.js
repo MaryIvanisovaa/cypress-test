@@ -5,17 +5,10 @@ it ('Filling out the registration form and clicking the "Register" button)', ()=
 
 cy.visit('/auth/register');
 
-cy.get('[nbinput]').eq(0).type('Mariia')
-  .should('have.attr', 'ng-reflect-model', 'Mariia');
-
-cy.get('[nbinput]').eq(1).type('test@gmail.com')
-  .should('have.value', 'test@gmail.com');
-
-cy.get('[nbinput]').eq(2).type('ash51srhdm', {log:false})
-  .should('have.value', 'ash51srhdm');
-
-cy.get('[nbinput]').eq(3).type('ash51srhdm', {log:false})
-  .should('have.value', 'ash51srhdm');
+const testData = ['Mariia', 'test@gmail.com', 'ash51srhdm', 'ash51srhdm']
+      cy.get('[nbinput]').each(($el, index) => {
+        cy.wrap($el).type(testData[index]).should('have.attr', 'ng-reflect-model', testData[index]);
+      });
   
 cy.get('.custom-checkbox').should('not.be.checked').click()
 cy.get('.appearance-filled').click()
