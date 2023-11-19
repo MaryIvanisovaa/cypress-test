@@ -1,13 +1,18 @@
-describe('Check form "Enter name"', ()=>{
-    context('page modal-overlays/dialog', ()=>{
+// cypress/integration/dialogTest.spec.js
+import DialogPage from 'C:/Users/Admin/cypress-test/cypress/pageObjects/modalOverlaysPage'
 
-it ('Check form "Enter name" on page modal-overlays/dialog(Return Result From Dialog)', ()=>{
-cy.visit('pages/modal-overlays/dialog');
-cy.get('.appearance-filled').last().click()
-cy.get('input').parent().should('be.visible')
-cy.contains('Enter your name').should('be.visible')
-cy.get('input').last().get('.cancel').get('.status-success')
+describe('Check form "Enter name"', () => {
+  const dialogPage = new DialogPage();
 
-});
-});
+  context('page modal-overlays/dialog', () => {
+    it('Check form "Enter name" on page modal-overlays/dialog(Return Result From Dialog)', () => {
+      dialogPage.visitDialogPage();
+      dialogPage.openEnterNameDialog();
+      dialogPage.isNameFormVisible();
+      dialogPage.isPromptVisible();
+      dialogPage.enterName('John Doe'); 
+      dialogPage.clickCancelButton();
+      dialogPage.isStatusSuccessVisible();
+    });
+  });
 });

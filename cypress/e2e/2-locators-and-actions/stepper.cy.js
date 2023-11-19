@@ -1,17 +1,26 @@
-describe('Check text of "Step content#1"', ()=>{
-    context('Check  text of all buttons', ()=>{
+
+import StepperPage from 'C:/Users/Admin/cypress-test/cypress/pageObjects/stepperPage1';
+
+describe('Check text of "Step content#1"', () => {
+  const stepperPage = new StepperPage();
+
+  context('Check text of all buttons', () => {
+    it('Check text of "Step content#1"', () => {
+      stepperPage.visitStepperPage();
+      stepperPage.checkFirstStepText('First step');
+
+      stepperPage.clickNextButton(1);
+      stepperPage.checkFirstStepText('Second step');
+
+      stepperPage.clickNextButton(0);
+      stepperPage.checkFirstStepText('Third step');
+
+      stepperPage.clickNextButton(0);
+      stepperPage.checkFirstStepText('Fourth step');
 
 
-it ('Check text of "Step content#1', ()=>{
-cy.visit('pages/layout/stepper');
-cy.get('.selected').eq(0).should('include.text', 'First step').get('[nbsteppernext=""]').eq(1).click()
-cy.get('.selected').eq(0).should('include.text', 'Second step').get('[nbsteppernext=""]').eq(0).click()
-cy.get('.selected').eq(0).should('include.text', 'Third step').get('[nbsteppernext=""]').eq(0).click()
-cy.get('.selected').eq(0).should('include.text', 'Fourth step')
-
+    });
+  });
 });
-});
-});
-
 
 
