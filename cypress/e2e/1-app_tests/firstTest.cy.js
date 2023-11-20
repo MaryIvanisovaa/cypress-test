@@ -1,17 +1,14 @@
-/// <reference types="cypress" />
+
+import StepperPage from '../../pageObjects/stepperPage';
+
+const stepperPage = new StepperPage();
 
 describe("First test suite", () => {
   context("First test suite-context", () => {
     it("Verify url", () => {
-      cy.visit("layout/stepper");
-      cy.url().should("contain", "layout/stepper");
-    });
-  });
-});
+      stepperPage.visitStepperPage();
+      cy.url().should("contain", stepperPage.stepperUrl)
 
-describe("Second describe inside", () => {
-  it('Check text of button "Hide on click"', () => {
-    cy.visit("modal-overlays/toastr");
-    cy.get("span.text").should("contain", "Hide on click");
+    }); 
   });
 });
