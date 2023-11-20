@@ -1,5 +1,6 @@
 
-import StepperPage from 'C:/Users/Admin/cypress-test/cypress/pageObjects/stepperPage';
+import StepperPage from '../../pageObjects/stepperPage';
+
 const stepperPage = new StepperPage();
 
 describe("First test suite", () => {

@@ -1,5 +1,5 @@
 
-import StepperPage from 'C:/Users/Admin/cypress-test/cypress/pageObjects/stepperPage1';
+import StepperPage from '../../pageObjects/stepperPage1';
 
 describe('Check text of "Step content#1"', () => {
   const stepperPage = new StepperPage();

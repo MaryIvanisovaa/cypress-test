@@ -1,4 +1,4 @@
-import SmartTablePage from 'C:/Users/Admin/cypress-test/cypress/models/smartTablePage';
+import SmartTablePage from '../../models/smartTablePage';
 
 describe('Check functionality of Smart Table', () => {
   context('page - pages/tables/smart-table', () => {

@@ -1,5 +1,5 @@
 // cypress/integration/loginTest.spec.js
-import LoginPage from 'C:/Users/Admin/cypress-test/cypress/models/formHorizontalPage';
+import LoginPage from '../../models/formHorizontalPage';
 
 describe('This test checks login in Horizontal form', () => {
   const loginPage = new LoginPage();

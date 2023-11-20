@@ -1,4 +1,4 @@
-import RegistrationPage from 'C:/Users/Admin/cypress-test/cypress/models/registrationPage';
+import RegistrationPage from '../../models/registrationPage';
 describe('Check error messages for each field', () => {
     context('page - /auth/register', () => {
       it('Error behind "Email address" (empty input)', () => {

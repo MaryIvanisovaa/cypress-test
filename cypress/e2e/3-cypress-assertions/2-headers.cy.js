@@ -1,4 +1,4 @@
-import RegistrationPage from 'C:/Users/Admin/cypress-test/cypress/models/registrationPage';
+import RegistrationPage from '../../models/registrationPage';
 
 describe('Check the headers of all elements in the /auth/register page', () => {
     context('page - /auth/register', () => {

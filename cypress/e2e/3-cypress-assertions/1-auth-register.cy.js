@@ -1,4 +1,4 @@
-import RegistrationPage from 'C:/Users/Admin/cypress-test/cypress/models/registrationPage';
+import RegistrationPage from '../../models/registrationPage';
 
 describe('Check registration form and "Register" button', () => {
   context('page - /auth/register', () => {

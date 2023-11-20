@@ -1,5 +1,5 @@
 // cypress/integration/dialogTest.spec.js
-import DialogPage from 'C:/Users/Admin/cypress-test/cypress/pageObjects/modalOverlaysPage'
+import DialogPage from '../../pageObjects/modalOverlaysPage'
 
 describe('Check form "Enter name"', () => {
   const dialogPage = new DialogPage();
